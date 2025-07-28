@@ -1,0 +1,19 @@
+<body>
+<div class="registerUser">
+<h1>Register New User</h1>
+<form [formGroup]="userData" (ngSubmit)="submitUser()">
+  <label>Username:</label>
+  <input type="text" formControlName="username">
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+  <label>Role Name:</label>
+  <select formControlName="roleName" name="Roles" id="">
+    <option value="" disabled selected>Select Role</option>
+    <option value="" *ngFor="let role of roles" [value]="role.id">{{role.name}}</option>
+  </select>
+  <p>{{errMessage}}</p>
+  <button type="submit" [disabled]="!userData.valid">Register</button>
+  <a href="../view-all-registered-users">View Registered Users</a>
+</form>
+</div>
+</body>

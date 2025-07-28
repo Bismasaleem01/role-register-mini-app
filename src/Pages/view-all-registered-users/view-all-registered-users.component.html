@@ -1,0 +1,12 @@
+<table class="user-table">
+    <thead>
+        <th>Sr.No</th>
+        <th>Username</th>
+        <th>Email</th>
+    </thead>
+    <tr  *ngFor="let users of usersData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{users.userName}}</td>
+        <td>{{users.email}}</td>
+    </tr>
+</table>

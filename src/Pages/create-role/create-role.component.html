@@ -1,0 +1,10 @@
+<body>
+  <div class="createRole">
+<h2>Create Role</h2>
+<form [formGroup]="roleForm" (ngSubmit)="submitRole()">
+  <label>Role Name:</label><br>
+  <input formControlName="roleName" placeholder="Enter Role Name" /><br>
+  <button type="submit">Create Role</button>
+</form>
+</div>
+</body>
